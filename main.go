@@ -11,6 +11,11 @@ func main() {
 	r := gin.Default()
 	formatter.NewJSONFormatter()
 	r.Use(cors.Default())
+	r.GET("/", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"server": "ok"
+		})
+	})
 	r.GET("/ping", func(c *gin.Context) {
 		c.JSON(200, gin.H{
 			"server": "ok",
