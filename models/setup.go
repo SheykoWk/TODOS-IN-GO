@@ -14,9 +14,7 @@ func ConnectDB() *mongo.Collection {
 	// ConnectDB is a helper for connecting to a MongoDB cluster
 
 	// Set client options
-	clientOptions := options.Client().ApplyURI("mongodb+srv://admin:admin@sh3yk0.byjkm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
-
-	")
+	clientOptions := options.Client().ApplyURI("mongodb+srv://sh3yk0:1234@sh3yk0.byjkm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 
 	// Connect to MongoDB
 	client, err := mongo.Connect(context.TODO(), clientOptions)
